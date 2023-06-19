@@ -33,9 +33,9 @@ const siteContent = { // BU NESNEYİ DEĞİŞTİRMEYİN
     "copyright": "Copyright Bir Şirket Sitesi 2022",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img":"http://localhost:9000/img/accent.png",
+    "logo-img": "../mocks/img/logo.png",
+    "cta-img": "../mocks/img/cta.png",
+    "accent-img":"../mocks/img/accent.png",
   },
 };
 
