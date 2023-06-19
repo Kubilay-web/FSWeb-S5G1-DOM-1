@@ -35,7 +35,7 @@ const siteContent = { // BU NESNEYİ DEĞİŞTİRMEYİN
   "images": {
     "logo-img": "http://localhost:9000/img/logo.png",
     "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "accent-img":"http://localhost:9000/img/accent.png",
   },
 };
 
@@ -43,3 +43,67 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+const navbar = document.querySelector(".container nav");
+console.log(navbar);
+
+const navItems=document.querySelectorAll(".container nav a");
+console.log(navItems);
+
+navItems.forEach((item,index) => {
+   item.textContent=siteContent.nav[`nav-item-${index+1}`];
+   item.classList.add("italic");
+});
+
+
+
+const logo = document.querySelector(".container header img");
+logo.src=siteContent.images["logo-img"];
+
+const ctaImg=document.querySelector(".container .cta img");
+ctaImg.src=siteContent.images["cta-img"];
+
+const accentImg=document.querySelector(".main-content .middle-img");
+ accentImg.src=siteContent.images["accent-img"];
+
+ const ctaH1 = document.querySelector(".container .cta h1");
+ ctaH1.textContent=siteContent.cta.h1;
+
+
+ const ctaButton =document.querySelector(".container .cta button");
+ ctaButton.textContent = siteContent.cta.button;
+
+
+ const topContent = document.querySelector(".container .main-content .top-content");
+ const topContentH4= topContent.querySelectorAll("h4");
+ const topContentP= topContent.querySelectorAll("p");
+
+ topContentH4[0].textContent=siteContent["ana-içerik"]["özellikler-h4"];
+ topContentH4[1].textContent=siteContent["ana-içerik"]["hakkımızda-h4"];
+ topContentP[0].textContent=siteContent["ana-içerik"]["özellikler-içerik"];
+ topContentP[1].textContent=siteContent["ana-içerik"]["hakkımızda-içerik"];
+
+
+ const bottomContent = document.querySelector(".container .main-content .bottom-content");
+ const bottomContentH4= bottomContent.querySelectorAll("h4");
+ const bottomContentP= bottomContent.querySelectorAll("p");
+
+ bottomContentH4[0].textContent=siteContent["ana-içerik"]["servisler-h4"];
+ bottomContentH4[1].textContent=siteContent["ana-içerik"]["ürünler-h4"];
+ bottomContentH4[2].textContent=siteContent["ana-içerik"]["vizyon-h4"];
+
+ bottomContentP[0].textContent=siteContent["ana-içerik"]["servisler-içeriği"];
+ bottomContentP[1].textContent=siteContent["ana-içerik"]["ürünler-içeriği"];
+ bottomContentP[2].textContent=siteContent["ana-içerik"]["vizyon-içeriği"];
+
+ const contact = document.querySelector(".container .contact");
+ contact.querySelector("h4").textContent=siteContent.iletisim["iletişim-h4"];
+
+ contact.querySelectorAll("p")[0].textContent=siteContent.iletisim.adres;
+ contact.querySelectorAll("p")[1].textContent=siteContent.iletisim.telefon;
+ contact.querySelectorAll("p")[2].textContent=siteContent.iletisim.email;
+
+
+ const footer = document.querySelector(".container footer a");
+ footer.textContent=siteContent.footer["copyright"];
+ footer.classList.add("bold");
